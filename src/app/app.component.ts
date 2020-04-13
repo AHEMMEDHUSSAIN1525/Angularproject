@@ -35,15 +35,15 @@ export class AppComponent {
     },
    
 ];
-additem(newitemLabel){
+additem(newitemMovie){
   var newlist={
-    Label:"Industry",
-    Movie:newitemLabel,
-    Hero:" "
+    Label:"Industry ",
+    Movie:newitemMovie,
+    Hero:"Not found "
   }
   this.lists.push(newlist);
   };
   deleteitem(table){
-    this.lists=this.lists.filter(t=>t.Label!==table.Label);
+    this.lists=this.lists.filter(t=>t.Movie!==table.Movie);
   }
 }
