@@ -6,13 +6,15 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('alert') alert;
+  @ViewChild('Terminalinput')component;
+  Terminal:string='';
+  count:number=0;
   showAlert() {
-    console.log(this.alert.nativeElement.value);
+    
+    this.count=this.count+1;
+    this.Terminal="You clicked" +" " +this.count +"times";
+    console.log(this.component.nativeElement.value);
+    
   }
-   
- 
-
- title = 'movie-app';
 
 }

@@ -8,6 +8,7 @@ import { ProjectTwoComponent } from './project-two/project-two.component';
 import { ReverseStr } from './mypipes/reverseStr';
 import { ReverseArray } from './mypipes/reverseArr';
 import { RemoveDuplicates } from './mypipes/removeDups';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RemoveDuplicates } from './mypipes/removeDups';
     ReverseStr,
     ReverseArray,
     RemoveDuplicates,
+    ChildComponent,
   
   ],
   imports: [
