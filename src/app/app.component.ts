@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,44 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('alert') alert;
+  showAlert() {
+    console.log(this.alert.nativeElement.value);
+  }
+   
+ 
+
  title = 'movie-app';
 
- lists=[
-  
-   {
-    Label:"Tollywood",
-    Movie:" Mirchi ",
-    Hero:"Prabhas"
-    },
-
-    {
-      Label:"Bollywood",
-      Movie:"War",
-      Hero:"Hritik Roshan"
-    },
-
-    {
-        Label:"Hollywood",
-        Movie:"Terminator",
-        Hero:"Arnold"
-    },
-
-    {
-          Label:"Kollywood",
-          Movie:"KGF",
-          Hero:"Yash"
-    },
-   
-];
-additem(newitemMovie){
-  var newlist={
-    Label:"Industry ",
-    Movie:newitemMovie,
-    Hero:"Not found "
-  }
-  this.lists.push(newlist);
-  };
-  deleteitem(table){
-    this.lists=this.lists.filter(t=>t.Movie!==table.Movie);
-  }
 }
